@@ -1,0 +1,41 @@
+.grid-container {
+  display: grid; /*define o elemento como um grid container*/
+  grid-template-columns: 1fr 1fr; /*define três colunas de larguras iguais*/
+  grid-gap: 10px; /*define um espaço de 10px entre os itens*/
+}
+.grid-item1 {
+  background-color: rgb(156, 14, 212); /*cor de fundo*/
+  color: white; /*cor do texto*/
+  border: 1px solid #ddd; /*borda cinza*/
+  padding: 20px; /*Espaçamento interno de 20px*/
+  text-align: center; /*centraliza o texto*/
+  font-size: 25px; /*tamanho da fonte*/
+}
+.grid-item2 {
+  color: white; /*cor do texto*/
+  border: 0px solid #ddd; /*borda cinza*/
+  padding: 20px; /*Espaçamento interno de 20px*/
+  text-align: center; /*centraliza o texto*/
+}
+.grid-item1 {
+  text-align: center;
+}
+img {
+  width: 70%; /* A imagem ocupa 100% do espaço da coluna */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* (Opcional) Bordas arredondadas */
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-item1 {
+    font-size: 20px;
+    padding: 20px;
+  }
+  .grid-item2 {
+    font-size: 20px;
+    padding: 20px;
+  }
+}

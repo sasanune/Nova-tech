@@ -1,0 +1,15 @@
+/*estilos para mobile, reponsivo*/
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /*uma coluna*/
+  }
+  .grid-item1 {
+    font-size: 20px; /*reduz o tamanho da fonta*/
+    padding: 15px; /*ajusta o espaçamento interno*/
+  }
+  .grid-item2 {
+    font-size: 20px; /*reduz o tamanho da fonta*/
+    padding: 15px; /*ajusta o espaçamento interno*/
+  }
+}

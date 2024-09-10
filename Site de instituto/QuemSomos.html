@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Quem somos</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sabrina Nunes" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="styles/style (1).css" />
+    <link rel="stylesheet" href="styles/responsivo site.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="logo" data-aos="zoom-in-up" data-aos-duration="2000">
+        <img
+          src="img/Uniruy.png"
+          alt="logo de instituição"
+          width="500"
+          height="200"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="Instituto.html">Início</a></li>
+          <li><a href="QuemSomos.html">Quem somos</a></li>
+          <li><a href="Nossos cursos.html">Nossos Cursos</a></li>
+          <li><a href="Contatos.html">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <style>
+      .grid-container {
+        /*container principal*/
+        display: grid; /*define o elemento como um grid container*/
+        grid-template-columns: 1fr; /*define três colunas de larguras iguais*/
+        margin: 25px;
+      }
+      .grid-item1 {
+        /*fundo roxo, lado esquerdo encima*/
+        background-color: rgb(178, 17, 252); /*cor de fundo*/
+        color: white; /*cor do texto*/
+        border: 0 solid #ddd; /*borda cinza*/
+        padding: 15px; /*Espaçamento interno de 20px*/
+        text-align: center; /*centraliza o texto*/
+        font-size: 25px; /*tamanho da fonte*/
+        border-radius: 10px;
+        margin: 50px;
+      }
+      .grid-container-It {
+        margin: 50px;
+        padding: auto;
+        height: auto;
+      }
+      .grid1 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+          "titulo titulo titulo" /* cabeçalho ocupando todo o espaço*/
+          "item1 item2 item3" /* 3 colunas, 3 linhas*/
+          "item4 item5 item6";
+        background-color: rgb(178, 17, 252);
+        border: 5px;
+        padding: 15px;
+        grid-template-rows: 50px;
+        border-radius: 10px;
+      }
+
+      #titulo {
+        grid-area: titulo; /* define o nome do grid-area para colocar no grid-template-area*/
+      }
+      #item1 {
+        grid-area: item1;
+        border-radius: 10px;
+      }
+      #item2 {
+        grid-area: item2;
+        border-radius: 10px;
+      }
+      #item3 {
+        grid-area: item3;
+        border-radius: 10px;
+      }
+      #item4 {
+        grid-area: item4;
+        border-radius: 10px;
+      }
+      #item5 {
+        grid-area: item5;
+        border-radius: 10px;
+      }
+      #item6 {
+        grid-area: item6;
+        border-radius: 10px;
+      }
+      .item {
+        /*classe item que define uma padrão para todos que tiver essa classe*/
+        background-color: rgb(241, 241, 241); /*cor de fundo*/
+        color: rgb(0, 0, 0); /*cor do texto*/
+        border: 0px solid #ddd; /*borda cinza*/
+        margin: 15px;
+        padding: 25px; /*Espaçamento interno de 20px*/
+        text-align: center; /*centraliza o texto*/
+        font-size: 15px; /*tamanho da fonte*/
+        transition: all 0.3 ease; /* Transição suave para qualquer efeito aplicado nas caixas */
+      }
+      ul li {
+        list-style-type: none;
+      }
+
+      h1 {
+        font-size: arial;
+        color: #000000;
+        text-align: center;
+      }
+      h3 {
+        font-size: 25px;
+        color: #000000;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      h5 {
+        color: #000000;
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 15px;
+        color: #050303;
+        line-height: 1.6;
+        text-indent: 40px;
+      }
+      footer {
+        background-color: rgb(178, 17, 252);
+        color: #ffffff;
+        text-align: center;
+        padding: 10px 5;
+        margin: 0px;
+      }
+    </style>
+
+    <div class="container-geral">
+      <div class="grid-container">
+        <div class="grid-item1">
+          <h3 id="titulo"><b>Quem Somos</b></h3>
+          <h5><b>História da Wyden História:</b></h5>
+          <p>
+            Fundada no ano de 2009, e atualmente composta por 10 instituições
+            nas Regiões Norte, Nordeste e Sudeste.
+          </p>
+          <h5><b>Diferenciais:</b></h5>
+          <p>
+            Somos reconhecidos pela alta qualidade de ensino aplicada nos
+            modelos de ensino 100% digitais (EAD), no tradicional ensino
+            presencial e no semipresencial e, para 2023, trazemos o novo modelo,
+            o Flex.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-container-It">
+        <div class="grid1">
+          <h3 id="titulo"><b>Nossos Valores</b></h3>
+          <div
+            class="item"
+            id="item1"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <b>Foco no aluno:</b> <br />
+            Todos nós trabalhamos para o aluno, temos paixão por educar.
+          </div>
+          <div
+            class="item"
+            id="item2"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <b>Senso de dono:</b><br />
+            E resultado Agimos como donos, entregamos resultado em equipe.
+          </div>
+          <div
+            class="item"
+            id="item3"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <b>Qualidade:</b><br />
+            Oferecemos experiência educacional única para todos, com uso intenso
+            de tecnologia.
+          </div>
+          <div
+            class="item"
+            id="item4"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <b>Pessoas: </b><br />
+            Sentimos orgulho em trabalhar aqui e acreditamos em meritocracia.
+          </div>
+          <div
+            class="item"
+            id="item5"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <b>Inovação e simplicidade:</b><br />
+            O novo nos atrai, soluções simples também.
+          </div>
+          <div
+            class="item"
+            id="item6"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <b>Diversidade e ética:</b><br />
+            Fazemos o certo, valorizamos as diferenças e a diversidade.
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy;2024 Instituição de Ensino. Todos os direitos reservados.</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+/* Estilos para alinhar os containers lado a lado */
+.galeria {
+  display: flex; /* Coloca os containers em linha */
+  justify-content: space-around; /* Adiciona espaçamento entre eles */
+  gap: 20px; /* Espaçamento entre as imagens */
+}
+
+/* Estilos básicos para o container */
+.container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do container */
+  position: relative;
+}
+
+/* Estilos básicos para as imagens */
+.imagem {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease; /* Transição suave para o fade-out */
+}
+
+/* Efeito de desvanecimento ao passar o mouse */
+.container:hover .imagem {
+  opacity: 0; /* Fade-out na imagem ao passar o mouse */
+}

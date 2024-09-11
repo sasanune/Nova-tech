@@ -1,0 +1,323 @@
+/*Estilos gerais para o corpo da página*/
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../img/fundo\ azul.png);
+  background-size: cover;
+  color: #333;
+}
+
+/*Estilo parwa o cabeçalho*/
+header {
+  background-image: url(../img/cabeçalho\ azul.png);
+  background-size: contain; /*A imagem do cabeçalho também cobre totalmente a área*/
+  text-align: center; /*Centraliza o texto dentro do cabeçalho*/
+  padding: 60px; /*adiciona espaçamento interno ao cabeçalho*/
+}
+header h1 {
+  color: white; /*define a cor do texto do título como branca*/
+  font-size: 3rem; /*define o tamanho da fonte do título*/
+}
+
+/*Estilos para os efeitos nos textos*/
+.text-effects h2 {
+  margin: 20px; /*Define a margem superito e inferior do textos*/
+  font-size: 2rem;
+  transition: all 0.3s ease; /*Transição suave para qualquer efeito aplicado no texto*/
+}
+/*Efeito de preenchimento com cor ao passar o mouse*/
+.effect-fill:hover {
+  background-image: linear-gradient (to right, #f2709c, #ff9472); /*criar um gradiente de cores*/
+  background-clip: text; /*O gradiente e aplicado apenas ao texto*/
+  -webkit-background-clip: text; /*compatibilidade com os navegadores baseados em Webkit*/
+  color: transparent; /*torna a cor do texto transparente deixando o gradiente invisivel*/
+}
+/*Efeito de ampliar o texto ao passar o mouse*/
+.effect-scale:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do texto em 20% */
+}
+
+/* Efeito de fade-in (aparecer lentamente) */
+.effect-fade-in {
+  opacity: 0; /* O texto começa invisível */
+  animation: fadeIn 1.5s forwards; /* Animação de aparecimento com duração de 1,5 segundos */
+}
+
+/* Definição da animação fade-in */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* O texto fica visível no final da animação */
+  }
+}
+
+/* Efeito de rotação do texto ao passar o mouse */
+.effect-rotate:hover {
+  transform: rotate(15deg); /* Gira o texto em 15 graus */
+}
+
+/* Efeito de sombra no texto ao passar o mouse */
+.effect-shadow:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Aplica uma sombra suave ao texto */
+}
+
+/* Efeito de crescimento de borda ao passar o mouse */
+.effect-border-grow:hover {
+  border: 2px solid #000000; /* Aplica uma borda de 2px de espessura */
+  padding: 5px; /* Adiciona espaçamento interno para dar mais destaque */
+}
+
+/* Efeito de brilho no texto ao passar o mouse */
+.effect-glow:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Aplica uma sombra branca simulando um brilho */
+}
+
+/* Efeito de flutuação do texto ao passar o mouse */
+.effect-float:hover {
+  transform: translateY(
+    -10px
+  ); /* Move o texto 10px para cima, simulando uma flutuação */
+}
+
+/* Efeito de mudança de cor ao passar o mouse */
+.effect-color-shift:hover {
+  color: #ffffff; /* Altera a cor do texto */
+}
+
+/* Efeito de desfoque do texto ao passar o mouse */
+.effect-blur:hover {
+  filter: blur(2px); /* Aplica um desfoque ao texto */
+}
+
+/* Estilos para os efeitos nas caixas */
+.box-effects {
+  display: flex; /* Utiliza layout flexível para organizar as caixas */
+  flex-wrap: wrap; /* Permite que as caixas quebrem linha se necessário */
+  justify-content: space-around; /* Distribui as caixas com espaçamento ao redor */
+  padding: 20px; /* Adiciona espaçamento interno ao contêiner das caixas */
+}
+
+/* Estilos gerais das caixas */
+.box {
+  width: 200px; /* Largura fixa de 200px */
+  height: 150px; /* Altura fixa de 150px */
+  margin: 20px; /* Margem ao redor das caixas */
+  background-color: #2b00c5; /* Cor de fundo das caixas */
+  color: white; /* Cor do texto dentro das caixas */
+  display: flex; /* Flexbox para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente o texto dentro das caixas */
+  align-items: center; /* Centraliza verticalmente o texto dentro das caixas */
+  text-align: center; /* Centraliza o texto dentro da caixa */
+  transition: all 0.3s ease; /* Transição suave para qualquer efeito aplicado nas caixas */
+}
+
+/* Efeito de sombra ao passar o mouse na caixa */
+.box-shadow:hover {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5); /* Cria uma sombra grande e suave ao redor da caixa */
+}
+
+/* Efeito de zoom ao passar o mouse na caixa */
+.box-zoom:hover {
+  transform: scale(1.1); /* Aumenta a caixa em 10% */
+}
+
+/* Efeito de troca de cor ao passar o mouse na caixa */
+.box-hover-bg:hover {
+  background-color: #0c0c0c; /* Altera a cor de fundo da caixa */
+}
+
+/* Efeito de rotação da caixa ao passar o mouse */
+.box-rotate:hover {
+  transform: rotate(10deg); /* Gira a caixa em 10 graus */
+}
+
+/* Efeito de bordas arredondadas crescendo ao passar o mouse */
+.box-border-radius:hover {
+  border-radius: 50%; /* Arredonda totalmente as bordas da caixa */
+}
+
+/* Efeito de translação (movimento lateral) ao passar o mouse */
+.box-translate:hover {
+  transform: translateX(20px); /* Move a caixa 20px para a direita */
+}
+
+/* Efeito de escala ao passar o mouse */
+.box-scale:hover {
+  transform: scale(1.2); /* Aumenta a caixa em 20% */
+}
+
+/* Efeito de inclinação ao passar o mouse */
+.box-skew:hover {
+  transform: skew(10deg); /* Inclina a caixa em 10 graus */
+}
+
+/* Efeito de brilho na caixa ao passar o mouse */
+.box-glow:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Aplica um efeito de brilho ao redor da caixa */
+}
+
+/* Efeito de deslizamento para cima ao passar o mouse */
+.box-slide-up:hover {
+  transform: translateY(-10px); /* Move a caixa 10px para cima */
+}
+/*NOVOS EFEITOS*/
+
+/* Texto com Overflow cortado com reticências */
+.text-cut {
+  width: 300px; /* Define a largura do container */
+  white-space: nowrap; /* Impede o texto de quebrar em várias linhas */
+  overflow: hidden; /* Esconde o texto que ultrapassar o limite */
+  text-overflow: ellipsis; /* Adiciona reticências (...) ao texto que é cortado */
+  border: 1px solid #000; /* Define uma borda preta */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 20px; /* Margem inferior */
+}
+
+/*Texto com FADE OUT no OverFlow*/
+.text-fade-out {
+  width: 300px; /* Define a largura do container */
+  height: 60px; /* Define a altura do container */
+  overflow: hidden; /* Esconde o texto que ultrapassar o limite */
+  position: relative; /* Necessário para usar o efeito de gradiente corretamente */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  ); /* Efeito de gradiente que cria o efeito de fade out */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 20px; /* Margem inferior */
+}
+
+/*Texto com sombra animada*/
+.text-shadow-hover {
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+  color: #000000; /* Cor do texto */
+  transition: text-shadow 0.5s ease; /* Animação de transição suave da sombra */
+  margin-bottom: 20px; /* Margem inferior */
+}
+.text-shadow-hover:hover {
+  text-shadow: 4px 4px 10px rgb(50, 5, 255); /* Aplica uma sombra ao texto ao passar o mouse */
+}
+
+/*texto com efeito de digitação*/
+@keyframes typing {
+  from {
+    width: 0;
+  } /* Inicia com largura 0 */
+  to {
+    width: 70%;
+  } /* Aumenta a largura até 70% ao longo do tempo */
+}
+.text-typing {
+  font-family: monospace; /* Usa uma fonte de espaçamento fixo */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  overflow: hidden; /* Esconde o texto que ultrapassar o limite */
+  border-right: 3px solid; /* Simula um cursor de digitação com uma borda à direita */
+  width: 0; /* Inicia com largura 0 */
+  animation: typing 4s steps(30, end) forwards; /* Animação de digitação com 30 passos em 4 segundos */
+}
+
+/*Texto com efeito de neon*/
+.text-neon {
+  font-size: 32px; /* Tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+  color: #fff; /* Cor do texto branco */
+  text-align: center; /* Centraliza o texto */
+  text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7,
+    0 0 40px #0ff, 0 0 80px #0ff; /* Aplica múltiplas sombras para criar o efeito de neon */
+  animation: neon-blink 1.5s ease-in-out infinite alternate; /* Animação que pisca o neon infinitamente */
+  margin-bottom: 20px; /* Margem inferior */
+}
+@keyframes neon-blink {
+  from {
+    text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7,
+      0 0 40px #0ff, 0 0 80px #0ff; /* Estado inicial do efeito de neon */
+  }
+  to {
+    text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7,
+      0 0 40px #00ffe7, 0 0 10px #00ffe7; /* Estado final, reduzindo a intensidade das sombras */
+  }
+}
+
+/* ---- Image/Div Effects ---- */
+
+/* 1. Imagem com efeito de escurecimento e opacidade */
+.image-darken {
+  width: 300px; /* Largura da imagem */
+  height: 200px; /* Altura da imagem */
+  background: url("https://via.placeholder.com/300") no-repeat center center; /* Imagem de fundo centralizada */
+  background-size: cover; /* Redimensiona a imagem para cobrir todo o espaço */
+  transition: filter 0.5s ease, opacity 0.5s ease; /* Transição suave para o efeito de escurecimento */
+  margin-bottom: 20px; /* Margem inferior */
+}
+.image-darken:hover {
+  filter: brightness(50%); /* Escurece a imagem ao passar o mouse */
+  opacity: 0.8; /* Reduz a opacidade da imagem */
+}
+
+/* 2. Imagem com efeito de zoom ao passar o mouse */
+.image-zoom {
+  width: 300px; /* Largura da imagem */
+  height: 200px; /* Altura da imagem */
+  background: url("https://via.placeholder.com/300") no-repeat center center; /* Imagem de fundo centralizada */
+  background-size: cover; /* Redimensiona a imagem para cobrir todo o espaço */
+  transition: transform 0.5s ease; /* Transição suave para o efeito de zoom */
+  margin-bottom: 20px; /* Margem inferior */
+}
+.image-zoom:hover {
+  transform: scale(1.1); /* Aplica um zoom de 10% na imagem ao passar o mouse */
+}
+
+/* 3. Imagem com borda animada */
+.image-border-animate {
+  width: 300px; /* Largura da imagem */
+  height: 200px; /* Altura da imagem */
+  background: url("https://via.placeholder.com/300") no-repeat center center; /* Imagem de fundo centralizada */
+  background-size: cover; /* Redimensiona a imagem para cobrir todo o espaço */
+  border: 5px solid transparent; /* Inicialmente, sem borda visível */
+  transition: border 0.5s ease; /* Transição suave para o efeito da borda */
+  margin-bottom: 20px; /* Margem inferior */
+}
+.image-border-animate:hover {
+  border: 5px solid #1900f8; /* Aplica uma borda azul ao passar o mouse */
+}
+
+/* 4. Div com efeito de rotação */
+.div-rotate {
+  width: 150px; /* Largura da div */
+  height: 150px; /* Altura da div */
+  background-color: #3498db; /* Cor de fundo azul */
+  transition: transform 0.5s ease; /* Transição suave para o efeito de rotação */
+  margin-bottom: 20px; /* Margem inferior */
+}
+
+.div-rotate:hover {
+  transform: rotate(360deg); /* Roda a div em 360 graus ao passar o mouse */
+}
+
+/* 5. Div com efeito de balançar */
+.div-shake {
+  width: 150px; /* Largura da div */
+  height: 150px; /* Altura da div */
+  background-color: #0025fa; /* Cor de fundo azul */
+  animation: shake 0.8s infinite; /* Animação contínua de balançar */
+  margin-bottom: 20px; /* Margem inferior */
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  } /* Posição inicial */
+  25% {
+    transform: translate(5px, 0);
+  } /* Move 5px para a direita */
+  50% {
+    transform: translate(0, 5px);
+  } /* Move 5px para baixo */
+  75% {
+    transform: translate(-5px, 0);
+  } /* Move 5px para a esquerda */
+  100% {
+    transform: translate(0, -5px);
+  } /* Move 5px para cima */
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Instituição de Ensino</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sabrina Nunes" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="styles/style (1).css" />
+    <link rel="stylesheet" href="styles/responsivo site.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="logo" data-aos="zoom-in-up" data-aos-duration="2000">
+        <img
+          src="img/Uniruy.png"
+          alt="logo de instituição"
+          width="500"
+          height="200"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="Instituto.html">Início</a></li>
+          <li><a href="QuemSomos.html">Quem somos</a></li>
+          <li><a href="Nossos cursos.html">Nossos Cursos</a></li>
+          <li><a href="Contatos.html">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            min-width: 100vh;
+        }
+       
+        h2 {
+            text-align: center;
+            background-color: rgb(178, 17, 252);
+        }
+       
+        .filters {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            flex-grow: 1;
+        }
+        .course-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+        .course-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .course-details {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        .badge.launch {
+            background-color: #28a745;
+        }
+        .badge.hot {
+            background-color: #dc3545;
+        }
+        .enroll-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .enroll-btn:hover {
+            background-color: #0056b3;
+        }
+       
+    </style>
+</head>
+
+<body>
+<main>
+<h2>Graduação - Lista de Cursos</h2>
+
+<div class="course-list">
+    <div class="course-card">
+        <div class="course-title">Administração</div>
+        <div class="course-details">
+            Bacharelado | 4 anos <br>
+            Modalidades: Ao vivo, Digital (EaD), Semipresencial, Presencial
+        </div>
+        <button class="enroll-btn">Se inscrever</button>
+    </div>
+
+    <div class="course-card">
+        <div class="course-title">Administração Pública</div>
+        <span class="badge launch">Lançamento</span>
+        <div class="course-details">
+            Bacharelado | 2,5 anos <br>
+            Modalidades: Digital (EaD)
+             <button class="enroll-btn">Se inscrever</button>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-title">Análise e Desenvolvimento de Sistemas</div>
+        <span class="badge hot">Em alta</span>
+        <div class="course-details">
+            Tecnólogo | 2,5 anos <br>
+            Modalidades: Ao vivo, Digital (EaD), Semipresencial, Presencial
+            <button class="enroll-btn">Se inscrever</button>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-title">Arquitetura e Urbanismo</div>
+        <div class="course-details">
+            Bacharelado | 5 anos <br>
+            Modalidades: Presencial <br>
+            <button class="enroll-btn">Se inscrever</button>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-title">Banco de Dados</div>
+        <div class="course-details">
+            Tecnólogo | 2,5 anos <br>
+            Modalidades: Digital (EaD)
+            <button class="enroll-btn">Se inscrever</button>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-title">Biomedicina</div>
+        <div class="course-details">
+            Bacharelado | 4 anos <br>
+            Modalidades: Semipresencial, Presencial, Flex<br>
+            <button class="enroll-btn">Se inscrever</button>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-title">Ciência de Dados</div>
+        <span class="badge launch">Lançamento</span>
+        <div class="course-details">
+            Tecnólogo | 2,5 anos <br>
+            Modalidades: Digital (EaD)
+            <button class="enroll-btn">Se inscrever</button>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-title">Ciências Biológicas</div>
+        <div class="course-details">
+            Bacharelado | 4 anos <br>
+            Modalidades: Semipresencial
+        <button class="enroll-btn">Se inscrever</button>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>&copy;2024 Instituição de Ensino. Todos os direitos reservados.</p>
+      </footer>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+  </body>
+</html>

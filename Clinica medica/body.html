@@ -1,0 +1,228 @@
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal com grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilo da caixa principal do accordion */
+.accordion-container {
+    border: 2px solid red;
+}
+
+/* Estilo dos itens do accordion */
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilo do título (que é clicável) */
+.accordion-label {
+    display: block;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Estilo para o botão de abrir/fechar */
+.accordion-label:after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+}
+
+/* Quando o item estiver ativo, o botão muda para "x" */
+input[type="checkbox"]:checked + .accordion-label:after {
+    content: '×';
+}
+
+/* Ocultando os checkboxes */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilo do conteúdo interno */
+.accordion-content {
+    background-color: #d4e6d5;
+    display: none;
+    padding: 15px;
+}
+
+/* Quando o checkbox estiver marcado, o conteúdo será exibido */
+input[type="checkbox"]:checked + .accordion-label + .accordion-content {
+    display: block;
+}
+
+/* Subcategorias com estilo mais interno */
+.subcategory {
+    padding-left: 20px;
+}
+
+.subcategory a {
+    color: white;
+    display: block;
+    padding: 10px;
+    background-color: #4CAF50;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.subcategory a:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+<!-- Primeira clínica -->
+<div class="accordion-container">
+<!-- Item 1 -->
+<div class="accordion-item">
+    <input type="checkbox" id="accordion1">
+        <label class="accordion-label" for="accordion1">MEDICINA</label>
+    <div class="accordion-content">
+    <div class="subcategory">
+        <a href="#">ACUPUNTURA</a>
+        <a href="#">ALERGIA E IMUNOLOGIA</a>
+        <a href="#">ANGIOLOGIA</a>
+        <a href="#">CARDIOLOGIA</a>
+        <a href="#">CIRURGIA DE CABEÇA E PESCOÇO</a>
+        <a href="#">CIRURGIA GERAL</a>
+        <a href="#">CIRURGIA PLÁSTICA</a>
+        <a href="#">CLINICA MÉDICA</a>
+        <a href="#">CLÍNICO GERAL</a>
+        <a href="#">COLOPROCTOLOGIA</a>
+        <a href="#">CONSULTA MÉDICA AMBULATORIAL</a>
+        <a href="#">DERMATOLOGIA</a>
+        <a href="#">ENDOCRINOLOGIA</a>
+        <a href="#">GASTROENTEROLOGIA</a>
+        <a href="#">GERIATRIA</a>
+        <a href="#">GINECOLOGIA</a>
+        <a href="#">HOMEOPATIA</a>
+        <a href="#">INFECTOLOGIA</a>
+        <a href="#">MASTOLOGIA</a>
+        <a href="#">MEDICINA ESPORTIVA</a>
+        <a href="#">MEDICINA ESTÉTICA</a>
+        <a href="#">MEDICINA INTERNA</a>
+        <a href="#">NEFROLOGIA</a>
+        <a href="#">NEUROLOGIA</a>
+        <a href="#">NUTROLOGIA</a>
+        <a href="#">OBSTETRÍCIA</a>
+        <a href="#">OBSTETRÍCIA</a>
+        <a href="#">OBSTETRÍCIA</a>
+    </div>
+    </div>
+</div>
+    
+<!-- Item 2 -->
+<div class="accordion-item">
+<input type="checkbox" id="accordion2">
+    <label class="accordion-label" for="accordion2">ODONTOLOGIA</label> 
+    <div class="accordion-content">
+    <div class="subcategory">
+        <a href="#">CIRURGIA ORAL MENOR</a>
+        <a href="#">DENTÍSTICA</a>    
+        <a href="#">ENDODONTIA</a> 
+        <a href="#">HARMONIZAÇÃO FACIL</a>
+        <a href="#">IMPLANTODONTIA</a>
+        <a href="#">ONDOTO GERIATRIA</a>
+        <a href="#">ODONTO PEDIATRIA</a>
+        <a href="#">ODONTOLOGIA</a>
+        <a href="#">PERIODONTIA</a>
+        <a href="#">PRÓTESE DENTAL</a>
+    </div>
+    </div>
+</div>
+
+<div class="accordion-item">
+<input type="checkbox" id="accordion3">
+    <label class="accordion-label" for="accordion3">PSICOLOGIA</label>
+    <div class="accordion-content">
+    <div class="subcategory">
+        <a href="#">HUMANISTA</a>
+        <a href="#">PSICANÁLISE</a>
+        <a href="#">PSICOLOGIA</a>
+        <a href="#">PSICOLOGIA CLÍNICA</a>
+        <a href="#">PSICOPEDAGOGIA</a>
+        <a href="#">TERAPIA COGNITIVO COMPORTAMENTAL</a>
+    </div>
+    </div>
+</div>
+
+<!-- Item 2 -->
+<div class="accordion-item">
+<input type="checkbox" id="accordion4">
+    <label class="accordion-label" for="accordion4">FISIOTERAPIA</label>
+    <div class="accordion-content">
+    <div class="subcategory">          
+        <a href="#">ACUPUNTURA</a>
+        <a href="#">CARDIORESPIRATÓRIA</a>   
+        <a href="#">ESPORTIVA</a>       
+        <a href="#">GERONTOLÓGICA</a>
+        <a href="#">NEUROFUNCIONAL</a>
+        <a href="#">OSTEOPATIA</a>
+        <a href="#">PILATES</a>
+        <a href="#">RPG (REEDUCAÇÃO POSTURAL GLOBAL)</a>
+        <a href="#">TERAPIA OCUPACIONAL</a>
+        <a href="#">TRAUMATO ORTOPÉDICA</a>
+    </div>
+    </div>
+</div>
+
+<div class="accordion-item">
+<input type="checkbox" id="accordion5">
+    <label class="accordion-label" for="accordion5">NUTRIÇÃO</label>
+    <div class="accordion-content">
+    <div class="subcategory">          
+        <a href="#">NUTRIÇÃO</a>
+        <a href="#">NUTRIÇÃO APLICADA A ESTÉTICA</a>   
+        <a href="#">NUTRIÇÃO CLÍNICA</a>       
+        <a href="#">NUTRIÇÃO ESPORTIVA</a>
+    </div>
+    </div>
+</div>
+
+<div class="accordion-item">
+<input type="checkbox" id="accordion6">
+    <label class="accordion-label" for="accordion6">OUTROS</label>
+    <div class="accordion-content">
+    <div class="subcategory">
+        <a href="#">ANÁLISE DE ÁGUA/ALIMENTOS</a>
+        <a href="#">ANATOMIA PATOLÓGICA E CITOPATOLOGIA</a>
+        <a href="#">CONSULTORIO EM SAÚDE</a>
+        <a href="#">ESTANDES</a>
+        <a href="#">ESTÉTICA</a>
+        <a href="#">FARMÁCIA</a>
+        <a href="#">FARMÁCIA DE MANIPULAÇÃO</a>
+        <a href="#">FONOAUDIOLOGIA</a>
+        <a href="#">LABORATÓRIO DE ANÁLISES CLÍNICAS</a>
+        <a href="#">LOJA DE COLCHÕES</a>
+        <a href="#">MICROPIGMENTAÇÃO</a>
+        <a href="#">ONG</a>
+        <a href="#">ÓTICA</a>
+        <a href="#">RESTAURANTE</a>
+        <a href="#">SPA</a>
+        <a href="#">TATUAGEM</a>
+        <a href="#">TRANSPLANTE CAPILAR</a>
+        <a href="#">TRATAMENTO APINÉIA E RONCO</a>
+        <a href="#">TREINAMENTO FÍSICO/AVALIAÇÃO FÍSICA</a>
+        <a href="#">VACINAS</a>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+</body>
+</html

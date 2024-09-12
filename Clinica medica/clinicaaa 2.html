@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sabrina Nunes" />
+    <title>Clínica Médica</title>
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <!--Logo da Clinica-->
+        <img src="img/logo.png" alt="Logo CCS" />
+      </div>
+      <!--Menu de navegação-->
+      <nav>
+        <ul>
+          <li><a href="#Inicial">Página Inicial</a></li>
+          <li><a href="#O-centro-clinico">O Centro Clínico</a></li>
+          <li><a href="#Especialidades">Especialidades</a></li>
+          <li><a href="#Contato">Contato</a></li>
+        </ul>
+      </nav>
+      <style>
+        /*CORPO DO SITE*/
+        /* Estilos globais do site */
+        body {
+          font-family: Arial, sans-serif; /* Define a fonte padrão para o site */
+          margin: 0; /* Remove a margem padrão */
+          padding: 0; /* Remove o preenchimento padrão */
+          background-color: #f4f4f4be; /* Cor de fundo suave */
+          color: #333; /* Cor do texto padrão */
+        }
+        /*CABEÇALHO*/
+        /* Estilos do cabeçalho */
+        header {
+          position: fixed; /* Faz o cabeçalho ficar fixo no topo */
+          top: 0; /* Alinha o cabeçalho ao topo */
+          left: 0; /* Alinha o cabeçalho à esquerda */
+          width: 98%; /* Faz o cabeçalho ocupar toda a largura da tela */
+          background-color: #ffffff; /* Cor de fundo do cabeçalho */
+          color: rgb(0, 0, 0); /* Cor do texto no cabeçalho */
+          display: flex; /* Usa flexbox para alinhar logo e navegação */
+          justify-content: space-between; /* Distribui os itens no espaço disponível */
+          padding: 18px; /* Espaçamento interno do cabeçalho */
+          z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+        }
+        /* Ajusta o espaço no topo do conteúdo para acomodar o cabeçalho fixo */
+        main {
+          padding-top: 100px; /* Ajuste este valor conforme a altura do cabeçalho */
+        }
+
+        /* Estilos do menu de navegação */
+        header nav ul {
+          list-style: none; /* Remove os marcadores da lista de navegação */
+          display: flex; /* Alinha os itens da navegação horizontalmente */
+          gap: 20px; /* Espaçamento entre os itens de navegação */
+        }
+
+        header nav ul li a {
+          color: rgb(0, 0, 0); /* Define a cor dos links de navegação */
+          text-decoration: none; /* Remove o sublinhado dos links */
+          font-weight: bold; /* Deixa os links em negrito */
+        }
+        /*PRIMEIRO CONTEUDO*/
+        /* Container principal com grid */
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(
+            auto-fill,
+            minmax(200px, 1fr)
+          ); /* Duas colunas */
+          background-color: red;
+          gap: 5px;
+          padding: 15px;
+          width: 98%;
+        }
+
+        /* Estilo dos itens do accordion */
+        .accordion-item {
+          margin-bottom: 10px;
+        }
+
+        /* Estilo do título (que é clicável) */
+        .accordion-label {
+          display: block;
+          background-color: green;
+          color: white;
+          padding: 15px;
+          cursor: pointer;
+          font-weight: bold;
+          position: relative;
+        }
+
+        /* Estilo para o botão de abrir/fechar */
+        .accordion-label:after {
+          content: "+";
+          position: absolute;
+          right: 20px;
+          font-size: 20px;
+        }
+
+        /* Quando o item estiver ativo, o botão muda para "x" */
+        input[type="checkbox"]:checked + .accordion-label:after {
+          content: "×";
+        }
+
+        /* Ocultando os checkboxes */
+        input[type="checkbox"] {
+          display: none;
+        }
+
+        /* Estilo do conteúdo interno */
+        .accordion-content {
+          background-color: #d4e6d5;
+          display: none;
+          padding: 15px;
+        }
+
+        /* Quando o checkbox estiver marcado, o conteúdo será exibido */
+        input[type="checkbox"]:checked + .accordion-label + .accordion-content {
+          display: block;
+        }
+
+        /* Subcategorias com estilo mais interno */
+        .subcategory {
+          padding-left: 20px;
+        }
+
+        .subcategory a {
+          color: white;
+          display: block;
+          padding: 10px;
+          background-color: #4caf50;
+          margin-bottom: 5px;
+          text-decoration: none;
+        }
+
+        .subcategory a:hover {
+          background-color: #45a049;
+        }
+        /*SEGUNDO CONTEUDO*/
+        label {
+          color: green;
+          font-weight: bold;
+        }
+        .btn {
+          background-color: #006400;
+          color: white;
+        }
+        .row {
+          width: 89%;
+        }
+
+        /*TERCEIRO CONTEUDO*/
+
+        .container {
+          display: grid;
+          place-items: center;
+          place-items: center;
+          padding: 20px;
+        }
+
+        .content {
+          max-width: 800px;
+          background: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          display: grid;
+          gap: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+          color: #000000;
+          text-align: center;
+        }
+        .cor {
+          color: #006400;
+        }
+        h2 {
+          font-size: 2rem;
+          color: #000000;
+          text-align: center;
+        }
+
+        p {
+          font-size: 1em;
+          line-height: 1.6;
+          color: #666;
+        }
+
+        .images {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 10px;
+        }
+        .images img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+        /*FOOTER*/
+        footer {
+          background-image: url("/img/footer.jpg");
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+          padding: 40px 20px;
+          text-align: center;
+          position: relative;
+        }
+        footer::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(
+            0,
+            0,
+            0,
+            0.6
+          ); /* Adiciona uma camada escura por cima da imagem */
+          z-index: 1; /* Garante que a camada esteja acima da imagem */
+        }
+        footer h3,
+        footer h4 {
+          margin-bottom: 10px;
+          color: #fff;
+          z-index: 2;
+          position: relative;
+        }
+
+        footer p {
+          margin-bottom: 20px;
+          color: #ccc;
+          z-index: 2;
+          position: relative;
+        }
+
+        .newsletter form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          z-index: 2;
+          position: relative;
+        }
+
+        .newsletter label {
+          margin-bottom: 5px;
+          font-size: 14px;
+          z-index: 2;
+          position: relative;
+        }
+
+        .email-container {
+          display: flex;
+          width: 100%;
+          max-width: 400px;
+          position: relative;
+        }
+        .email-container input[type="email"] {
+          padding: 10px;
+          border: none;
+          border-radius: 25px 0 0 25px; /* Bordas arredondadas para a esquerda */
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        .email-container button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 0 25px 25px 0; /* Bordas arredondadas para a direita */
+          background-color: #5cb85c;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          margin-left: -1px; /* Para evitar borda visível entre o input e o botão */
+        }
+
+        .email-container button:hover {
+          background-color: #4cae4c;
+        }
+
+        .footer-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 20px 0;
+          z-index: 2;
+          position: relative;
+        }
+
+        .footer-content {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .address,
+        .location {
+          flex: 1;
+          text-align: left;
+          padding: 40px;
+        }
+
+        .location iframe {
+          max-width: 100%;
+          border: 0;
+          padding: 5px;
+          z-index: 2;
+          position: relative;
+        }
+
+        footer .copyright {
+          margin-top: 20px;
+          z-index: 2;
+          position: relative;
+        }
+
+        footer .copyright p {
+          font-size: 14px;
+          color: #999;
+        }
+      </style>
+    </header>
+
+    <!--Banner na tela inicial com imagem e texto-->
+    <section class="banner">
+      <div class="banner-text">
+        <h2>Bem-Vindos à Clinica Medica</h2>
+      </div>
+    </section>
+    <main>
+      <div class="main-container">
+        <!-- Primeira clínica -->
+        <div class="grid-container">
+          <!-- Item 1 -->
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <input type="checkbox" id="accordion1" />
+              <label class="accordion-label" for="accordion1">MEDICINA</label>
+              <div class="accordion-content">
+                <div class="subcategory">
+                  <a href="#">ACUPUNTURA</a>
+                  <a href="#">ALERGIA E IMUNOLOGIA</a>
+                  <a href="#">ANGIOLOGIA</a>
+                  <a href="#">CARDIOLOGIA</a>
+                  <a href="#">CIRURGIA DE CABEÇA E PESCOÇO</a>
+                  <a href="#">CIRURGIA GERAL</a>
+                  <a href="#">CIRURGIA PLÁSTICA</a>
+                  <a href="#">CLINICA MÉDICA</a>
+                  <a href="#">CLÍNICO GERAL</a>
+                  <a href="#">COLOPROCTOLOGIA</a>
+                  <a href="#">CONSULTA MÉDICA AMBULATORIAL</a>
+                  <a href="#">DERMATOLOGIA</a>
+                  <a href="#">ENDOCRINOLOGIA</a>
+                  <a href="#">GERIATRIA</a>
+                  <a href="#">GINECOLOGIA</a>
+                  <a href="#">HOMEOPATIA</a>
+                  <a href="#">INFECTOLOGIA</a>
+                  <a href="#">MASTOLOGIA</a>
+                  <a href="#">MEDICINA ESPORTIVA</a>
+                  <a href="#">MEDICINA ESTÉTICA</a>
+                  <a href="#">MEDICINA INTERNA</a>
+                  <a href="#">NEFROLOGIA</a>
+                  <a href="#">NEUROLOGIA</a>
+                  <a href="#">NUTROLOGIA</a>
+                  <a href="#">OBSTETRÍCIA</a>
+                  <a href="#">OBSTETRÍCIA</a>
+                  <a href="#">OBSTETRÍCIA</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <input type="checkbox" id="accordion2" />
+            <label class="accordion-label" for="accordion2">ODONTOLOGIA</label>
+            <div class="accordion-content">
+              <div class="subcategory">
+                <a href="#">CIRURGIA ORAL MENOR</a>
+                <a href="#">DENTÍSTICA</a>
+                <a href="#">ENDODONTIA</a>
+                <a href="#">HARMONIZAÇÃO FACIL</a>
+                <a href="#">IMPLANTODONTIA</a>
+                <a href="#">ONDOTO GERIATRIA</a>
+                <a href="#">ODONTO PEDIATRIA</a>
+                <a href="#">ODONTOLOGIA</a>
+                <a href="#">PERIODONTIA</a>
+                <a href="#">PRÓTESE DENTAL</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <input type="checkbox" id="accordion3" />
+              <label class="accordion-label" for="accordion3">PSICOLOGIA</label>
+              <div class="accordion-content">
+                <div class="subcategory">
+                  <a href="#">HUMANISTA</a>
+                  <a href="#">PSICANÁLISE</a>
+                  <a href="#">PSICOLOGIA</a>
+                  <a href="#">PSICOLOGIA CLÍNICA</a>
+                  <a href="#">PSICOPEDAGOGIA</a>
+                  <a href="#">TERAPIA COGNITIVO COMPORTAMENTAL</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <input type="checkbox" id="accordion4" />
+            <label class="accordion-label" for="accordion4">FISIOTERAPIA</label>
+            <div class="accordion-content">
+              <div class="subcategory">
+                <a href="#">ACUPUNTURA</a>
+                <a href="#">ESPORTIVA</a>
+                <a href="#">GERONTOLÓGICA</a>
+                <a href="#">NEUROFUNCIONAL</a>
+                <a href="#">OSTEOPATIA</a>
+                <a href="#">PILATES</a>
+                <a href="#">RPG (REEDUCAÇÃO POSTURAL GLOBAL)</a>
+                <a href="#">TERAPIA OCUPACIONAL</a>
+                <a href="#">TRAUMATO ORTOPÉDICA</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <input type="checkbox" id="accordion5" />
+            <label class="accordion-label" for="accordion5">NUTRIÇÃO</label>
+            <div class="accordion-content">
+              <div class="subcategory">
+                <a href="#">NUTRIÇÃO</a>
+                <a href="#">NUTRIÇÃO APLICADA A ESTÉTICA</a>
+                <a href="#">NUTRIÇÃO CLÍNICA</a>
+                <a href="#">NUTRIÇÃO ESPORTIVA</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <input type="checkbox" id="accordion6" />
+            <label class="accordion-label" for="accordion6">OUTROS</label>
+            <div class="accordion-content">
+              <div class="subcategory">
+                <a href="#">ANÁLISE DE ÁGUA/ALIMENTOS</a>
+                <a href="#">ANATOMIA PATOLÓGICA E CITOPATOLOGIA</a>
+                <a href="#">CONSULTORIO EM SAÚDE</a>
+                <a href="#">ESTANDES</a>
+                <a href="#">ESTÉTICA</a>
+                <a href="#">FARMÁCIA</a>
+                <a href="#">FARMÁCIA DE MANIPULAÇÃO</a>
+                <a href="#">FONOAUDIOLOGIA</a>
+                <a href="#">LABORATÓRIO DE ANÁLISES CLÍNICAS</a>
+                <a href="#">LOJA DE COLCHÕES</a>
+                <a href="#">ONG</a>
+                <a href="#">ÓTICA</a>
+                <a href="#">RESTAURANTE</a>
+                <a href="#">SPA</a>
+                <a href="#">TATUAGEM</a>
+                <a href="#">TRANSPLANTE CAPILAR</a>
+                <a href="#">TRATAMENTO APINÉIA E RONCO</a>
+                <a href="#">TREINAMENTO FÍSICO/AVALIAÇÃO FÍSICA</a>
+                <a href="#">VACINAS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="row">
+          <!-- Nome do profissional/clínica -->
+
+          <div class="col-md-4 mb-3">
+            <div class="form-group">
+              <label for="profissional"
+                >Digite o nome do profissional/clínica</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="profissional"
+                placeholder="Nome do Profissional/Clínica"
+              />
+            </div>
+          </div>
+          <!-- Clínica -->
+          <div class="col-md-4 mb-3">
+            <div class="form-group">
+              <label for="clinica">Clínica</label>
+              <select class="form-control" id="clinica">
+                <option selected>ÁGORA ODONTOLOGIA</option>
+                <!-- Você pode adicionar mais opções aqui -->
+              </select>
+            </div>
+          </div>
+          <!-- Especialidade -->
+          <div class="col-md-3 mb-3">
+            <div class="form-group">
+              <label for="especialidade">Especialidade</label>
+              <select class="form-control" id="especialidade">
+                <option selected>Especialidades</option>
+                <!-- Adicionar outras especialidades aqui -->
+              </select>
+            </div>
+          </div>
+          <!-- Botão de pesquisa -->
+          <div class="col-md-1 mb-3 d-flex align-items-end">
+            <button type="button" class="btn">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <div class="container">
+        <div class="content">
+          <h1>Sobre o <span class="cor">Centro Clínico Sudoeste</span></h1>
+          <h2>Cuidando de você e sua família em um só lugar</h2>
+
+          <p>
+            O Centro Clínico Sudoeste foi projetado há mais de 8 anos para
+            receber pacientes e familiares com toda comodidade possível.
+          </p>
+          <p>
+            Contamos com um amplo e moderno ambiente de atendimento que funciona
+            de forma humanizada e independente, com o objetivo de fornecer
+            sempre a você e sua família um atendimento de qualidade.
+          </p>
+          <p>
+            Atualmente o nosso Centro Clínico possui 93 clínicas que atendem
+            inúmeras especialidades, com profissionais renomados e altamente
+            capacitados. Nosso espaço também dispõe de SPAs, Farmácias,
+            Restaurantes e Estacionamento Rotativo para sua maior comodidade.
+          </p>
+
+          <div class="images">
+            <img src="img/img1.jpg" alt="Imagem 1" />
+
+            <img src="img/img2.jpg" alt="Imagem 2" />
+
+            <img src="img/img3.jpg" alt="Imagem 3" />
+
+            <img src="img/img4.jpg" alt="Imagem 4" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="newsletter">
+        <h3>Inscreva-se em nossa Newsletter</h3>
+        <p>Cadastre-se para receber nossos informativos</p>
+        <form action="#" method="post" class="newsletter-form">
+          <label for="email">Seu e-mail</label>
+          <div class="email-container">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+            />
+            <button type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer-content">
+        <div class="address">
+          <h4>COMO CHEGAR</h4>
+          <p>SHCSW CENTRO CLÍNICO SUDOESTE, ST. SUDOESTE, BRASÍLIA - DF</p>
+        </div>
+        <div class="location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.8362114846093!2d-47.891159685243154!3d-15.799721689049097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3a5e35555555%3A0xa9b3f26aeb5ee0c7!2sCentro%20Cl%C3%ADnico%20Sudoeste!5e0!3m2!1spt-BR!2sbr!4v1630553522123!5m2!1spt-BR!2sbr"
+            width="500"
+            height="100"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024. Todos os direitos reservados. Sabrina Nunes</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site com Bootstrap</title>
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">       
+    <a class="navbar-brand" href="#">Damato Confecções</a>           
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">   
+    <span class="navbar-toggler-icon"></span>
+    
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav"> 
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item"> 
+        <a class="nav-link active" aria-current="page" href="bootstrap.html">Home</a> 
+    </li>                   
+        <li class="nav-item"> 
+        <a class="nav-link" href="Sobre.html">Sobre</a>
+    </li
+        <li class="nav-item">  
+        <a class="nav-link" href="#">Produtos</a>          
+    </li>    
+        <li class="nav-item">                   
+        <a class="nav-link" href="Contato.html">Contato</a>          
+    </li>
+    </ul>
+</div> 
+</div>
+</nav>
+
+<style>
+    .contact-section {
+        padding: 60px 0;
+    }
+    .contact-form {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 8px;
+    }
+    .contact-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 40px 0;
+    }
+    .footer-section h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+    .footer-section p, .footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    }
+    .footer-section a:hover {
+    color: #fff;
+    }
+    .social-icons a {
+    color: #ccc;
+    margin-right: 15px;
+    font-size: 24px;
+    }
+    .social-icons a:hover {
+    color: #fff;
+    }
+    </style>
+</head>
+<body>
+
+<div class="container contact-section">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="contact-form">
+                <h2 class="contact-title text-center">Entre em Contato</h2>
+                <form action="#" method="POST">
+                    <!-- Nome -->
+                    <div class="mb-3">
+                                         
+<label for="name" class="form-label">Nome</label>      
+<input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>               
+</div>
+                    
+<!-- Email -->
+                                      
+<div class="mb-3">
+<label for="email" class="form-label">E-mail</label> 
+<input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+</div>
+<!-- Assunto -->
+<div class="mb-3">
+<label for="subject" class="form-label">Assunto</label>    
+<input type="text" class="form-control" id="subject" name="subject" placeholder="Assunto" required>
+</div>
+
+<!-- Mensagem -->
+<div class="mb-3">     
+<label for="message" class="form-label">Mensagem</label>      
+<textarea class="form-control" id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+</div>
+
+<!-- Botão de Envio -->  
+<div class="text-center">
+<button type="submit" class="btn btn-primary">Enviar Mensagem</button>                 
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="row">
+<!-- Contato -->
+<div class="col-md-4 footer-section">
+<h5>Contato</h5>      
+<p><strong>Endereço:</strong> Rua Exemplo, 123 - Cidade, Estado</p>
+<p><strong>Telefone:</strong> (11) 1234-5678</p>
+<p><strong>Email:</strong> contato@damatoconfeccoes.com</p>
+</div>
+     
+<!-- Redes Sociais -->
+<div class="col-md-4 footer-section">
+<h5>Redes Sociais</h5>  
+<div class="social-icons">
+<a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+            
+<a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+            
+<a href="#" target="_blank"><i class="bi bi-twitter"></i></a>         
+  
+<a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+</div>
+    </div>
+<!-- Newsletter -->
+
+<div class="col-md-4 footer-section">
+<h5>Newsletter</h5>
+<p>Assine nossa newsletter para receber novidades.</p>
+<form action="#" method="POST">        
+<div class="input-group mb-3">    
+<input type="email" class="form-control" placeholder="Seu e-mail" required>
+<button class="btn btn-primary" type="submit">Assinar</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="text-center mt-4">
+<p>&copy; 2024 Damato Confecções. Todos os direitos reservados.</p>
+
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Bootstrap Icons and JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

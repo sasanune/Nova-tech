@@ -1,0 +1,40 @@
+/*Resetar as configurações*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex; /* Escolha do display flexbox*/
+    flex-direction: column; /*Modelo do display*/
+    align-items: center; /* alinhamento dos intens*/
+    justify-content: center; /*modelo secundário do display*/
+    height: 100vh; /*largura*/
+    background-color: #f0f0f0; 
+}
+header { /*cabeçalho*/
+    text-align: center; /*texto centralizado*/
+    margin-bottom: 20px; /*final da margem */
+}
+.card-container { /*estilo card*/
+    display: flex; /*escolha do display  */
+    gap: 20px; /*  espaçamento entre card e outro */
+}
+.card {
+    width: 100px; /*largura do card*/
+    height: 150px;/*altura*/
+    background-color: #007bff; /*cor da card*/
+    color: white; /* cor do texto dentro da card*/
+    font-size: 2rem; /*tamanho da fonte*/
+    display: flex; /*escolha do display felxbox*/
+    align-items: center; /*alinhamento dos intes na flex*/
+    justify-content: center; /*modelo de display flex*/
+    border-radius: 10px; /*inserção da borda radial*/
+    cursor: pointer; /*ponteiro com "maozinho"*/
+    transition: background-color 0.3s ease; /*efeito de mudança de cor*/
+}
+.card:active { /*cor do efeito será apenas ao clicar*/ /*focus, hover*/
+    background-color: #0056b3;
+}

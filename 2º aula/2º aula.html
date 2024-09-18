@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sabrina Nunes">
+    <title>Olá Mundo</title>
+    <link rel="stylesheet"  href="styles/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Olá Mundo</h1>
+        <p>Bem-Vindo ao meu site</p>
+    </div>
+
+
+    <script> 
+        //Exibe a mensagem no console. executando e apurando
+        let x = 20;
+        console.log("O valor de x é: " + x);
+       //Exibe um alerta no navegador 
+        window.alert("Estudem!");
+        // Permitirá a entrada de dados e o console exibirá a saída no navegador
+        let nome = window.prompt("Qual seu nome? ");
+        console.log("Nome informado: " + nome);
+        // O window.open() abre uma nova janela ou aba com o URL especificado. BLANK significa abrir uma janela em branco
+       window.open("https://www.google.com.br/?hl=pt-BR", "_blank");
+        //2000 milissegundos = 2 segundos
+        window.setTimeout(function () {
+            console.log("Executando apór 2 segundos");
+        }, 2000);
+        //confirma algo 
+        window.confirm("Você estar entendendo?")
+        //fecharaá a janela 
+        window.close()
+        //Iniciará uma impressao de página
+        window.print()//coloca o link de algo que queira imprimir 
+        //Executa uma função repetidamente em intervalos de tempos(milissegundos)
+        window.setInterval(function () {
+            console.log ("Você nao quer apreneder mesmo? ")
+        } ) //dentro do ultimo parenteses tem o delay);
+
+        //Cancelamento das setInterval e SetTimeOut
+        window.clearInterval(IntervalID);
+        window.cleanTimeout(timeoutId);
+
+        //Manipulação das janelas
+
+        window.scroll(x, y);
+        //rola a página para a posição especificada
+
+        window.scrollBy (x, y);
+        //rola a página para a qualidade especificada
+
+        window.resizeTo(width, height);
+        //redimensiona a janela para a largura e altura
+
+        window.moveTo(x, y);
+        //Move a janela para as coordenadas especificadas.
+
+        window.document 
+        //iniciara uma alteração com o DOM
+
+        window.history (); //Historico
+
+        window.forward (); //proxima janela
+
+        window.back (); //janela anterior
+
+        window.go (0); //navega no historico, exemplo janela nº 5 
+
+        //Eventos da window
+        /*window.getSelection; //selecione um determinado item
+
+        window.addEventListener(event, function ()); //adicionará um evento 
+         
+        window.removeEventListener(event, function); //Remove o evento */
+        //Efeitos na janela
+        window.focus; //focada
+        window.blur; //remove o foca da janela (embaça)
+
+        //Principais Console
+        
+        console.log("essa mensagem é padrão"); //exibe uma mensagem
+        console.error("este é um erro comum"); //exibe um pop-up de erro
+        console.info("não se esqueça de estudar"); //exibe um pop-up de informação
+        console.warn("sem estudo, sem pix"); //exibe o pop-up de aviso
+
+        //Principais Console de saídas
+
+        console.clear //limpo o console
+        console.dir //cria um diretório
+        /* console.table //cria uma tabela para a array*/
+        //exibe uma tabela com dados no console
+        let pessoas = [{nome: "Ana", idade: 28}, {nome: "Bruna", idade: 22}]
+        console.table(pessoas);
+        //agrupa mensagens em uma hierarquia
+        console.group("Grupo de logs");
+        console.log("Log dentro do grupo");
+        console.groupEnd();
+        //exibe uma mensagem de texto se a condição for falsa
+        console.assert(2 === 3, "Erro: 2 não é igual a 3");
+
+
+
+
+    </script>
+</body>
+</html>

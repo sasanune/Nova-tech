@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sabrina Nunes">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Alunos</h1>
+        <form id="alunoForm">
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <input type="number" id="idade" placeholder="Digite sua idade" min="18" required>
+            <input type="text" placeholder="Qual curso você deseja">
+            <input type="text" id="emails" placeholder="Digite seu emails (separados pro vírgula)" required>
+            <button type="submit">Cadastrar Cliente</button>
+        </form>
+        <div id="alunosList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
